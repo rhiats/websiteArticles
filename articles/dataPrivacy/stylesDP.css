@@ -1,0 +1,66 @@
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+/* Style the logo link */
+.header a.logo {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: helvetica;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Style the page title */
+.page_title h1 {
+  float: center;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 50px;
+  border-radius: 4px;
+  font-family: helvetica;
+}
+
+/* Style the content on the page */
+.content h3 {
+  float: center;
+  color: #2c3338;
+  text-align: center;
+  text-justify: inter-word;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: helvetica;
+}
+
+/* Style the content on the page */
+.references {
+  float: left;
+  color: #50575e;
+  text-align: left;
+  text-justify: inter-word;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: helvetica;
+}
