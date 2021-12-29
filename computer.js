@@ -1,8 +1,12 @@
 function draw_computer() {
 
   var canvas = document.getElementById('canvas');
+
   if (canvas.getContext) {
-    var context = canvas.getContext('2d');
+    var context=canvas.getContext('2d');
+    var i=0;
+    var speed=50;
+    var txt="Welcome"
 
     context.fillRect(0,30,500,300);
     context.clearRect(10,37,480,280);
