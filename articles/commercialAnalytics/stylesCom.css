@@ -47,12 +47,12 @@
 .content h3 {
   float: center;
   color: #2c3338;
-  text-align: center;
+  text-align: justify;
   text-justify: inter-word;
   text-decoration: none;
   font-size: 14px;
   font-family: times new roman;
-  border-radius: 50px;
+  border-radius: 500px;
 }
 
 /* Style the content on the page */
@@ -72,7 +72,7 @@
 }
 
 .graph {
-  width: 60%;
+  width: 70%;
   margin: auto;
   display: block;
 }
