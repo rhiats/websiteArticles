@@ -1,7 +1,5 @@
 function customer_purchase_bar_chart() {
 
-  var canvas = document.getElementById('svg');
-
   const dataset = [99, 68, 2];
 
   const w = 500;
