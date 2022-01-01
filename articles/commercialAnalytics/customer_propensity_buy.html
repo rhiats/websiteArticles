@@ -7,8 +7,10 @@
 		initial-scale=1.0"/>
 		<title>Rhia Portfolio</title>
 		<link rel="stylesheet" href="stylesCom.css">
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+		<script src="customer_purchase.js"> </script>
 	</head>
-	<body>
+	<body onload="customer_purchase_bar_chart();">
 
 		<div class="header">
 		  <a href="index.html" class="logo"> Rhia Singh </a>
@@ -23,13 +25,14 @@
 		</div>
 
 		<div class="content">
-			<h3> Band reputation is reflected by the design of its website. A polished and user-friendly website encourages users to search through the tabs of a website, mention the website to friends, and purchase products through e-commerce. Obtaining a deeper understanding of consumer behavior is imperitive for business' to design websites that mold potential visitors into actual customers. Trends in the behavior of website visitors reveal insights into their purchasing potential and value to the brand. </h3>
+			<h3> Brand reputation is reflected by the design of its website. A polished and user-friendly website encourages users to search through the tabs of a website, mention the website to friends, and purchase products through e-commerce. Obtaining a deeper understanding of consumer behavior is imperitive for business' to design websites that mold potential visitors into actual customers. Trends in the behavior of website visitors reveal insights into their purchasing potential and value to the brand. </h3>
 
 			<h3> The website behavior of approximately 455K visitor to an unspecified webpage for clothing retail is detailed in a dataset found on Kaggle. The dataset provides a glipse into the influence of technology in the private sector to the primarily London based transactions. There are more vistitors who did not purchase a product, than visitors who did purchase a product, which is important to note, when trying to delve into the purchasing potential of a customer. Amazon, an e-commerce website, recieves 2.5M United State (US)visitors a month. Those visitors may have accounts on the site or be new to the site and their actions influence the purchasing potential of these consumers. Very similar to a show window, some of those visitors may just virtually window shop, while others may actually purchase products on the site. Honing into the behaviors of these consumers provides valuable insight into the interactions of people with webpages. </h3>
 
-			<center><img src="images/no_data_points.png" alt="RandomDataPoints" width="500" height="300"></center>
 			
 			<h3> Generally the customers visiting the website tended to visit on their mobile device emphasizing the importance of a seemlessly designed user-experience for all devices, with a priortization on mobile devices for this website. A majority of the the website visitors did not sign into an account, which may represent a lack of accounts on the website. It is unclear whether an account is required for people the purchase products on the website, but if it is, then it is essential to design a UI the motivates new users to create an account. On average, a website visitor in the dataset conducts 3 activities on the webpage. The acitives may include adding to a wishlist, signing into an account or even investigating the size of products. As the average visitor tends to conduct a limited number of activies on a website, the more streamlined the process, then the less effort on the visitor to purchase a product. For example, a returning visitor may not be required to sign-into their account on every visit, which is one less step they need to take before potentially purchasing a product on the website.  </h3>
+
+			<center><canvas id="canvas" width="500" height="500"></canvas></center>
 
 			<h3> The website visitors in the dataset are approximately evenly split between returning and new users emphasizing that the website manages to balance both maintaining a steady flow of new users and repeat users. The website is both expanding its potential consumer base as well as maintaining a base of loyal visitors, demonstatrating a design that is effective in attracting new visitors and maintaining current clients. The returning visitors tend to purchase products from the site, which may hint at a consumer behavior where people view a product and then return to purchase it. This is further exphasized by the trend where people view checkout but do not always continue on to finalizing their order. Designing a website that encourages more users to purchase products on their first visit may be important because a user may decide not to return to the website simply because they forgot they planned on purchasing the product. Emailing users to complete their order may help remind users to complete their purchase. </h3>
 
@@ -52,27 +55,9 @@
 			</h3>
 
 			<h3>
-				https://machinelearningmastery.com/logistic-regression-for-machine-learning/
+				https://github.com/rhiats/customer_propensity_to_buy/blob/main/customer-propensity-to-buy.ipynb
 			</h3>
 
-			<h3>
-				https://towardsdatascience.com/mastering-classification-with-scikit-learn-2cc0cffe33e3
-			</h3>
-
-			<h3>
-				https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
-
-			</h3>
-
-			<h3>
-				https://towardsdatascience.com/how-to-best-evaluate-a-classification-model-2edb12bcc587
-
-			</h3>
-
-			<h3>
-				https://towardsdatascience.com/how-to-best-evaluate-a-classification-model-2edb12bcc587
-
-			</h3>
 
 		</div>
 
