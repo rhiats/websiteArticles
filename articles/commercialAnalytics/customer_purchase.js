@@ -13,5 +13,6 @@ function customer_purchase_bar_chart() {
      .attr("height", (d, i) => d * 3)
      .attr("fill", "navy")
      .attr("class", "bar")
-
+     .append("title")
+     .text((d)=>(d))
 }
