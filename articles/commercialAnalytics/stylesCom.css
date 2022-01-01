@@ -50,8 +50,9 @@
   text-align: center;
   text-justify: inter-word;
   text-decoration: none;
-  font-size: 12px;
-  font-family: helvetica;
+  font-size: 14px;
+  font-family: times new roman;
+  border-radius: 50px;
 }
 
 /* Style the content on the page */
@@ -61,10 +62,17 @@
   text-align: justify;
   text-justify: inter-word;
   text-decoration: none;
-  font-size: 18px;
-  font-family: helvetica;
+  font-size: 11px;
+  font-family: times new roman;
+  border-radius: 50px;
 }
 
 .bar:hover {
   fill: brown;
+}
+
+.graph {
+  width: 60%;
+  margin: auto;
+  display: block;
 }

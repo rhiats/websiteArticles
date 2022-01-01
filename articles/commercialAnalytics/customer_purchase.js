@@ -5,7 +5,7 @@ function customer_purchase_bar_chart() {
   const w = 500;
   const h = 500;
 
-  const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+  const svg = d3.select("body").append("svg").attr("width", w).attr("height", h).attr("class","graph");
 
   svg.selectAll("rect").data(dataset).enter()
     .append("rect")
@@ -17,4 +17,5 @@ function customer_purchase_bar_chart() {
     .attr("class", "bar")
     .append("title")
     .text((d)=>(d)+" %")
+    .attr("class","bar")
 }
