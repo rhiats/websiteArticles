@@ -9,7 +9,7 @@ function customer_purchase_bar_chart() {
 
   svg.selectAll("rect").data(dataset).enter().append("rect").attr("x", (d, i) => i * 30)
      .attr("y", (d, i) => h - 3 * d)
-     .attr("width", 25)
+     .attr("width", 50)
      .attr("height", (d, i) => d * 3)
      .attr("fill", "navy")
      .attr("class", "bar")
