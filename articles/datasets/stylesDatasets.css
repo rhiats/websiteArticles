@@ -47,11 +47,13 @@
 .content h3 {
   float: center;
   color: #2c3338;
-  text-align: center;
+  text-align: justify;
   text-justify: inter-word;
   text-decoration: none;
-  font-size: 18px;
-  font-family: helvetica;
+  font-size: 14px;
+  font-family: times new roman;
+  margin-right: 150px;
+  margin-left: 80px;
 }
 
 /* Style the content on the page */
@@ -61,6 +63,8 @@
   text-align: justify;
   text-justify: inter-word;
   text-decoration: none;
-  font-size: 18px;
-  font-family: helvetica;
+  font-size: 11px;
+  font-family: times new roman;
+  margin-right: 150px;
+  margin-left: 80px;
 }

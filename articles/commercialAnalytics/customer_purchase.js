@@ -2,7 +2,7 @@ function customer_purchase_bar_chart() {
 
   const dataset = [99, 68, 2];
 
-  const w = 1000;
+  const w = 1000000;
   const h = 200;
 
   const svg = d3.select("body").append("svg").attr("width", w).attr("height", h).attr("class","graph");
@@ -28,5 +28,5 @@ function customer_purchase_bar_chart() {
        .append("text")
        .text((d) => d)
        .attr("x", (d, i) => i * 30)
-       .attr("y", (d, i) => h - (3 * d) + 3)
+       .attr("y", (d, i) => h + (3 * d) + 3)
 }
