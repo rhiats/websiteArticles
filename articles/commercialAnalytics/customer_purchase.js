@@ -3,7 +3,7 @@ function customer_purchase_bar_chart() {
   const dataset = [99, 68, 2];
 
   const w = 500;
-  const h = 200;
+  const h = 400;
 
   const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
 
