@@ -20,7 +20,7 @@ function customer_purchase_bar_chart() {
     .attr("class","bar")
 
 
-  const dataset_labels = ["Sign-In", "Returning User", "Click Acc. Pg"];
+  const dataset_labels = ["Sign-In", "Revisit", "Log-In"];
 
   svg.selectAll("text")
        .data(dataset_labels)
@@ -28,5 +28,5 @@ function customer_purchase_bar_chart() {
        .append("text")
        .text((d) => d)
        .attr("x", (d, i) => i * 55)
-       .attr("y", (d, i) => h)
+       .attr("y", (d, i) => h+3)
 }
