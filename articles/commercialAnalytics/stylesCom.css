@@ -72,9 +72,3 @@
 .bar:hover {
   fill: cadetblue;
 }
-
-.graph {
-  width: 70%;
-  margin: auto;
-  display: block;
-}
