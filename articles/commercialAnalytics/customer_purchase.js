@@ -28,5 +28,5 @@ function customer_purchase_bar_chart() {
        .append("text")
        .text((d) => d)
        .attr("x", (d, i) => i * 55)
-       .attr("y", (d, i) => h + (3 * d))
+       .attr("y", (d, i) => h-3)
 }
