@@ -72,3 +72,8 @@
 .bar:hover {
   fill: cadetblue;
 }
+
+.graph {
+  margin-right: 150px;
+  margin-left: 80px;
+}
