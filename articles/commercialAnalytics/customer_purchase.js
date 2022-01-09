@@ -7,7 +7,7 @@ function customer_purchase_bar_chart() {
 
   const svg = d3.select("body").append("svg").attr("width", w).attr("height", h).attr("class","graph");
 
-  const scale = d3.scaleLinear().domain([0,w]).range([0,h]);
+  const scale = d3.scaleLinear().domain([0,165]).range([0,165]);
 
   const x_axis = d3.axisBottom().scale(scale);
 
