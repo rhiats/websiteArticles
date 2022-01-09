@@ -7,6 +7,11 @@ function customer_purchase_bar_chart() {
 
   const svg = d3.select("body").append("svg").attr("width", w).attr("height", h).attr("class","graph");
 
+  const scale = d3.scaleLinear().domain([0,w]).range([0,h]);
+
+  const x_axis = d3.axisBottom().scale(scale);
+
+
   svg.selectAll("rect").data(dataset).enter()
     .append("rect")
     .attr("x", (d, i) => i * 55)
@@ -26,7 +31,5 @@ function customer_purchase_bar_chart() {
        .data(dataset_labels)
        .enter()
        .append("text")
-       .text((d) => d)
-       .attr("x", (d, i) => i * 55)
-       .attr("y", (d, i) => h-3)
+       .call(x_axis)
 }
