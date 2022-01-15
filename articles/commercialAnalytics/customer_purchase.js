@@ -27,4 +27,10 @@ function customer_purchase_bar_chart() {
     .text((d)=>(d)+" %")
     .attr("class","bar")
 
+
+  function xAxis(g){
+
+    g.call(d3.axisBottom(x).tickFormat(i => data[i].name)
+  }
+
 }
