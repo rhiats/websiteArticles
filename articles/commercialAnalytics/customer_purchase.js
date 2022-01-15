@@ -32,5 +32,7 @@ function customer_purchase_bar_chart() {
     g.call(d3.axisBottom(x).tickFormat(i => dataset[i].name)
   }
 
+  svg.append('g').call(xAxis);
+  svg.node();
 
 }
