@@ -29,8 +29,8 @@ function customer_purchase_bar_chart() {
 
 
   function xAxis(g){
-
-    g.call(d3.axisBottom(x).tickFormat(i => data[i].name)
+    g.call(d3.axisBottom(x).tickFormat(i => dataset[i].name)
   }
+
 
 }
