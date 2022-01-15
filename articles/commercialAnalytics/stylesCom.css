@@ -5,6 +5,13 @@
   padding: 20px 10px;
 }
 
+svg {
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-bottom: 80px; 
+}
+
 /* Style the header links */
 .header a {
   float: right;
