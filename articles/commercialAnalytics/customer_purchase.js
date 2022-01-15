@@ -1,21 +1,24 @@
 function customer_purchase_bar_chart() {
 
-  const dataset = [99, 68, 2];
+  const dataset = [
+    { name: "Sign-In", value: 99}, 
+    { name: "Revisit", value: 68},
+    { name: "Log-In", value: 2}
+  ];
 
   const w = 500;
   const h = 400;
 
   const svg = d3.select("body").append("svg").attr("width", w).attr("height", h).attr("class","graph");
 
-  const scale = d3.scaleLinear().domain([1,3]).range([0,165]);
+  const x = d3.scaleBand().domain(d3.range(dataset.length)).range([0,w])
 
-  const x_axis = d3.axisBottom().scale(scale);
-
+  const y = d3.scaleLinear().domain([0,100]).range([0,400])
 
   svg.selectAll("rect").data(dataset).enter()
     .append("rect")
-    .attr("x", (d, i) => i * 55)
-    .attr("y", (d, i) => (h-100) - (3 * d))
+    .attr("x", (d, i) => x(i))
+    .attr("y", (d) => y(d.value))
     .attr("width", 50)
     .attr("height", (d, i) => d * 3)
     .attr("fill", "navy")
@@ -24,12 +27,4 @@ function customer_purchase_bar_chart() {
     .text((d)=>(d)+" %")
     .attr("class","bar")
 
-
-  const dataset_labels = ["Sign-In", "Revisit", "Log-In"];
-
-  svg.selectAll("text")
-       .data(dataset_labels)
-       .enter()
-       .append("text")
-       .call(x_axis)
 }
