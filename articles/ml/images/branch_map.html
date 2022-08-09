@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_bcbb9f953de94a2db893ecd643485e4d {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_bcbb9f953de94a2db893ecd643485e4d" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_bcbb9f953de94a2db893ecd643485e4d = L.map(
+                                  'map_bcbb9f953de94a2db893ecd643485e4d',
+                                  {center: [21.916,95.956],
+                                  zoom: 7,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_22e0635699694868a4bd5013676666b8 = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_bcbb9f953de94a2db893ecd643485e4d);
+        
+    
+
+            var marker_cac49c5a8d1a4aa0b8e4cdaa0c73f0b8 = L.marker(
+                [16.84,96.173],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bcbb9f953de94a2db893ecd643485e4d);
+            
+    
+            var popup_b56142d6f70b47fd899c2792cdd6cf02 = L.popup({maxWidth: '300'});
+
+            
+                var html_cc4d36be52b34f7dbdd8cac904ee4177 = $('<div id="html_cc4d36be52b34f7dbdd8cac904ee4177" style="width: 100.0%; height: 100.0%;">Yangon</div>')[0];
+                popup_b56142d6f70b47fd899c2792cdd6cf02.setContent(html_cc4d36be52b34f7dbdd8cac904ee4177);
+            
+
+            marker_cac49c5a8d1a4aa0b8e4cdaa0c73f0b8.bindPopup(popup_b56142d6f70b47fd899c2792cdd6cf02);
+
+            
+        
+    
+
+            var marker_26d4f74b24f64ebda0331a84ae9959c7 = L.marker(
+                [21.958,96.089],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bcbb9f953de94a2db893ecd643485e4d);
+            
+    
+            var popup_4535b475e80b4a6aae2d80bb792030f7 = L.popup({maxWidth: '300'});
+
+            
+                var html_d9d590fad490403bbf9cadeb978e69fd = $('<div id="html_d9d590fad490403bbf9cadeb978e69fd" style="width: 100.0%; height: 100.0%;">Mandalay</div>')[0];
+                popup_4535b475e80b4a6aae2d80bb792030f7.setContent(html_d9d590fad490403bbf9cadeb978e69fd);
+            
+
+            marker_26d4f74b24f64ebda0331a84ae9959c7.bindPopup(popup_4535b475e80b4a6aae2d80bb792030f7);
+
+            
+        
+    
+
+            var marker_d06d231ecaea4904af461cb116dae7d6 = L.marker(
+                [19.763,96.078],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bcbb9f953de94a2db893ecd643485e4d);
+            
+    
+            var popup_2e24ab864bc5461b98a225e84291bae6 = L.popup({maxWidth: '300'});
+
+            
+                var html_ac60628689654eeeac40064a0414e4e6 = $('<div id="html_ac60628689654eeeac40064a0414e4e6" style="width: 100.0%; height: 100.0%;">Naypyitaw</div>')[0];
+                popup_2e24ab864bc5461b98a225e84291bae6.setContent(html_ac60628689654eeeac40064a0414e4e6);
+            
+
+            marker_d06d231ecaea4904af461cb116dae7d6.bindPopup(popup_2e24ab864bc5461b98a225e84291bae6);
+
+            
+        
+</script>
