@@ -18,25 +18,41 @@
 
 
 		<div class="page_title">
-			<h1> Predict Supermarket Sales using Linear Regression: Quantity of Product strong Predictor </h1>
+			<h1> Predict Supermarket Sales using Linear Regression: Quantity Strong Predictor </h1>
 			<br>
 		</div>
 
 		<div class="content">
 			<h3> Forecasting sales can inform the amount of influence various aspects of a business have on
 				performance. This knowledge can be used to facilitate data-driven optimizations within business
-				tactics, such as demonstrated in the following analysis of transactional data from 3 supermarkets
-				in Mayanmar.
+				tactics, such as demonstrated in the following analysis of Q1 '19 transactional data from 
+				3 supermarkets in Mayanmar.
+			</h3>
+			
+			<h3> A linear regression analysis was conducted to determine the influence:
+				branch, membership status, day of the week and quantity sold had on the sales
+				in the supermarket chain. The results of the analysis can be found in the following workbook:
+				<a href="https://github.com/rhiats/Sales-Forcast-Linear-Regression"> Analysis Workbook </a>
+				The model in the workbook describes about 80% of the sales variance, with the quantity of products sold
+				being the most influencial factor in the analysis. 
 			</h3>
 
-			<center><img src="images/sale_forecasting/output/branch_map.html" alt="supermarkets" width="500" height="300"></center>
-			<center><figcaption> Map of Mayanmar, with the locations of the 3 supermarkets used in the analysis </figcaption></center>
-			
-			<h3> The datasets may contain the text in a social media post, numerical data on the cost of a stock, or even images of people taken by a security camera. The ability for machine learning algorithms to efficiently provide insights from such a wide range of data increases its utility in fields like healthcare, marketing and cyber security. </h3>
+			<center><img src="images/prod_line_per_branch.png" alt="supermarkets" width="500" height="350"></center>
+			<center><figcaption> Branch Share across Product Offering  </figcaption></center>
 
-			<h3> Similar to standard programming for software, machine learning algorithms are a tool that aim to efficiently provide a useful output. However, machine learning algorithms are unique, because they are not explicitly programmed to provide a particular response for a given input. The algorithm’s response changes as modifications are made to inputted data because they rely on trends in the dataset. </h3>
+			<h3> The 3 supermarket branches are in 3 distinct cities: Yangon, Mandalay and Naypyitaw. Irrespective of
+				these differences, the 3 branches offer the same 6 products as shown in the image. 
+				The differences in product share are minor, but worth mentioning with branch B selling about 40% Health products.
+				Overall, it seems like customers are equally likely to buy a product from any of the 3 branch. 
+				While the branch and product type may not have a strong change in sales,
+				each additional product sold, results in $57 of additional sales, so the supermarket chains should prioritize
+				the quantity of products sold as opposed to the type of product. 
+			</h3>
 
-			<h3> Machine Learning is a subset of artificial intelligence. It relies on principles from statistics and computer science and originated from principles in neuroscience, linguistics and logic. As reflected in its applications in a variety of fields, it is a powerful computational tool. </h3>
+			<h3> Moving forward, it may be beneficial to add more transactional data to the analysis, to understand information from additional quarters
+				as well as additional branches. Currently, the analysis is conducted on branches located in cities with
+				various populations, which may have different foot traffic. It would be interesting to include a customer identification
+				on the transactions, so the sales could be predicted at a customer level. </h3>
 
 			<br>
 
