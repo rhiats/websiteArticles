@@ -8,7 +8,7 @@
 /* Style the header links */
 .header a {
   float: right;
-  color: black;
+  color: navy;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -21,7 +21,7 @@
 .header a.logo {
   font-size: 20px;
   font-weight: bold;
-  font-family: helvetica;
+  font-family: sans-serif;
 }
 
 /* Change the background color on mouse-over */
@@ -51,7 +51,7 @@ color dark grey*/
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #0056b9;
 }
 
 /*Place the links on the navbar on the right*/
@@ -68,7 +68,7 @@ color dark grey*/
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  font-family: helvetica;
+  font-family: serif;
 }
 
 /* Change the block color to #111 (black) on hover */
@@ -79,12 +79,12 @@ color dark grey*/
 /* Style the page title */
 .page_title h1 {
   float: center;
-  color: black;
+  color: navy;
   text-align: center;
   text-decoration: none;
   font-size: 50px;
   border-radius: 4px;
-  font-family: helvetica;
+  font-family: serif;
 }
 
 /* Position the article image for hover effect */
@@ -116,7 +116,7 @@ color dark grey*/
   font-size: 20px;
   padding: 20px;
   text-align: center;
-  font-family: helvetica;
+  font-family: serif;
 }
 
 /* Mouse over, fade in the overlay title */
@@ -130,7 +130,7 @@ color dark grey*/
   color: black;
   text-align: center;
   text-decoration: none;
-  font-family: helvetica;
+  font-family: serif;
 }
 
 /* Position headshot */
@@ -138,3 +138,19 @@ color dark grey*/
   padding-top: 50px;
 }
 
+/* Style the footer with a grey background and some padding */
+.footer {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+
+/* Style the footer links */
+.footer a {
+  color: rgb(82, 79, 79);
+  text-align: center;
+  padding: 12px;
+  font-size: 18px;
+  display: inline;
+}
