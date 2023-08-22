@@ -16,12 +16,12 @@
 
 
 		<div class="page_title">
-			<h1> Skip the First Date, Just Observe the Tweets </h1>
+			<h1> Passenger Survival on the Titanic using Random Forest Classifier  </h1>
 			<br>
 		</div>
 
 		<div class="content">
-			<h3> Twitter, a popular social networking platform, permits account holders to share their thoughts with others on the site. Users repeatedly interact with each other and gain information from the text in tweets. In addition to the comments in a tweet, an interested person can also gather additional information, such as: </h3>
+			<h3> In 1912 the Titanic, a luxury passenger ship, sank in route from England to the United States. Women and children were evacuated first. Third class passengers did not realize the severity of the situation until it was too late for them to evacuate the ship, so most of those passengers did not survive the catastrophe. </h3>
 
 			<center><img src="images/tweet.jpeg" alt="tweet" width="500" height="300"></center>
 
