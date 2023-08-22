@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport"
+		content="width=device-width",
+		initial-scale=1.0"/>
+		<title>Rhia Portfolio</title>
+		<link rel="stylesheet" href="stylesDatasets.css">
+	</head>
+	<body>
+
+		<div class="header">
+		  <a href="index.html" class="logo"> Rhia Singh </a>
+		</div>
+
+
+		<div class="page_title">
+			<h1> Skip the First Date, Just Observe the Tweets </h1>
+			<br>
+		</div>
+
+		<div class="content">
+			<h3> Twitter, a popular social networking platform, permits account holders to share their thoughts with others on the site. Users repeatedly interact with each other and gain information from the text in tweets. In addition to the comments in a tweet, an interested person can also gather additional information, such as: </h3>
+
+			<center><img src="images/tweet.jpeg" alt="tweet" width="500" height="300"></center>
+
+			<center> <h5> Image Source: https://www.ledgerinsights.com/wp-content/uploads/2021/03/first-tweet-810x476.jpg </h5> </center>
+
+			<center><h3>Contributor: a twitter account that tweets for another account. 
+				Coordinates: the location of a tweet.
+				Created At: the time a tweet is created.
+				Delete: user information and time stamp for the removal of a tweet.
+				Favorited: a value indicating whether the tweet has been favorited.
+				In Reply to Screen Name: the username that the tweet is replying to.
+				Language: the language of a tweet.
+				Place: the city that a tweet originated from.
+				Possibly Sensitive: tweet contains an external link that may contain sensitive content.
+				Quote Count: the number of times a tweet is quoted on the platform.
+				Reply Count: the number of times a tweet has been replied to.
+				Retweet Count: the number of times a tweet has been retweeted.
+				User: information about the user who posted the tweet.
+				</h3></center>
+			
+			<h3> This information provides insight into the location of a person, interactions between the user and others on the platform, and the times users like to publish tweets. Using clustering algorithms and predictive statistics, even more information can be elucidated from the data to gain a deeper understanding about the user publishing the information on the platform. </h3>
+
+			<br>
+
+		</div>
+
+
+
+
+		<div class="references">
+
+			<h2> References: </h2>
+
+			<h3>
+				https://archive.org/details/archiveteam-twitter-stream-2021-01
+			</h3>
+
+			<h3>
+				https://www.techinasia.com/twitter-contributor
+			</h3>
+
+			<h3>
+				https://docs.tweepy.org/en/stable/extended_tweets.html
+			</h3>
+
+			<h3>
+				https://developer.twitter.com/en/docs/twitter-api/enterprise/data-dictionary/native-enriched-objects/tweet
+			</h3>
+
+		</div>
+
+	</body>
+</html>
