@@ -23,12 +23,19 @@
 		<div class="content">
 			<center><h3> The dataset contains consecutive transactions from January 1, 2013 to August 15, 2017. The transactions are from the Favorita stores located in Ecuador. </h3></center>
 
-			<center><img src="images/balanced.png" alt="balanced" width="450" height="450"></center>
+			<center><img src="images/timeseries_sales.png" alt="balanced" width="550" height="400"></center>
 
+			<center><h3> The Moving Average is the average sales within a sliding window of 90 days, a quarter, to visuaize the long term changes in sales and minimize the short term fluctuations caused by circumstances like holidays. While the trend appears linear, time only explains 15% of the moving average sales per quarter.
+
+				There are steep declines in the average sales during Q1 and Q4 of 2014. 
+				During this period the country was in a low inflation period with slow changes in the price of goods.
+				The decline may be attributed to spead of an illness, such as Ebola.
+				There is an additive seasonality in the sales as the median price increases year over year.
+			</h3></center>
 			
 			<center>
 			<h3> The results of the analysis can be found in the following workbook:
-				<a href="https://github.com/rhiats/titanicPrediction"> Analysis Workbook </a></h3></center>
+				<a href="https://github.com/rhiats/timeSeriesForecastSales/tree/main"> Analysis Workbook </a></h3></center>
 
 		</div>
 
@@ -40,23 +47,23 @@
 			<h2> References: </h2>
 
 			<h3>
-				https://www.kaggle.com/competitions/titanic/data
+				https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data?select=train.csv
 			</h3>
 			
             <h3>
-                https://towardsdatascience.com/a-beginners-guide-to-kaggle-s-titanic-problem-3193cb56f6ca
+                https://www.kaggle.com/learn/time-series
 			</h3>
 
             <h3>
-                https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/problem12.html
+                https://www.geeksforgeeks.org/how-to-calculate-moving-average-in-a-pandas-dataframe/
 			</h3>
 
             <h3>
-                https://anelmusic13.medium.com/how-to-score-top-3-in-kaggles-titanic-machine-learning-from-disaster-competition-13d056e262b1
+                https://bfi.uchicago.edu/wp-content/uploads/The-Case-of-Ecuador.pdf
 			</h3>
 
             <h3>
-                https://www.britannica.com/topic/Titanic
+                https://towardsdatascience.com/finding-seasonal-trends-in-time-series-data-with-python-ce10c37aa861
 			</h3>
 
 		</div>
