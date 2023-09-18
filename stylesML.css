@@ -57,6 +57,20 @@
 }
 
 /* Style the content on the page */
+.content h2 {
+  float: center;
+  color: #2c3338;
+  text-align: justify;
+  text-justify: inter-word;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: times new roman;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+/* Style the content on the page */
 .references {
   float: left;
   color: #50575e;
