@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport"
+		content="width=device-width",
+		initial-scale=1.0"/>
+		<title>Rhia Portfolio</title>
+		<link rel="stylesheet" href="stylesML.css">
+	</head>
+	<body>
+
+		<div class="header">
+		  <a href="index.html" class="logo"> Rhia Singh </a>
+		</div>
+
+
+
+
+		<div class="page_title">
+			<h1> Random Forest Classification of Breast Cancer Cells </h1>
+			<br>
+		</div>
+
+		<div class="content">
+			<h3> Breast Cancer is a type of cancer that originates in one or both of the breasts. In this sickness,
+				the cells replicate in an uncontrolled manner. It is the most common cancer found in women in the United States.
+			</h3>
+			
+			<h3> The dataset is composed of 569 descriptions of images from a fine needle aspirate (FNA) of a breast mass.
+				A FNA is a type of biobsy that can be used to diagnose breast cancer from breast tissue.
+				The features in the dataset describe the cell nuclei in the image. The nuclei is the "brain"
+				of the cell and contains important information about the reproduction the cells during mitosis.
+				The results of the analysis can be found in the following workbook:
+				<a href="https://github.com/rhiats/breastCancerClassification"> Analysis Workbook </a>
+				The Ranodm Forest Model was trained to classify the cells as benign or malignant with 92% accuracy.
+			</h3>
+
+			<h3> There exists class imbalance between the Benign and Malignant cells. There are significantly more
+				malgignant cells, so majority class undersampling is used to balance the classes. A random set of 
+				malignant samples are selected for the analysis, so that there is an equal number of benign and 
+				malignant cells. 
+			</h3>
+
+			<center><img src="images/balanced_bc_rf.png" alt="balanceBC" width="400" height="300"></center>
+			<center><figcaption> Class Imbalance  </figcaption></center>
+
+			<h3> There are 30 features in the dataset, so a Principle Component Analysis (PCA) is used to select the 
+				top 5 features and perform dimensionality reduction. The first principle component explains 98% of 
+				the variance. The top 5 features from the component are 'worst area,' 'mean area,' 
+				'area error,' 'worst perimeter,' and 'mean perimeter.' The classes are not linearly separaple and 
+				there is some overlap between the benign and malignant cells. The malignant cells are very dispersed 
+				in the lower dimension, so a non-linear model - the Random Forest - is selected to perform the binary 
+				classification
+			</h3>
+
+			<center><img src="images/pca_bc_rf.png" alt="pcaBC" width="400" height="400"></center>
+			<center><figcaption> PCA Benign and Malignant Cells  </figcaption></center>
+
+			<h3> The Random Forest model is trained on the top five features. It is a supervised learning algorithm
+				ensemble of decision trees. The output of the trees are aggregated to find the most popular result.
+				Bagging, or selection of a random set of samples, is used to prevent overfitting. 
+
+			</h3>
+
+			<center><img src="images/ROC_curve_bc_rf.png" alt="roc" width="500" height="350"></center>
+			<center><figcaption>  ROC Curve  </figcaption></center>
+
+			<h3> The model performs with an AUC score of 92 and shows a balance between the false and true positive rates
+				at various thresholds. The model performs with a precision of 90% and recall of 94%. It is correctly identifying
+				the benign and malignant cells with few false positives and false negatives. 
+				
+				<center>
+					<table>
+						<tr>
+							<td>95</td>
+							<td>11</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>100</td>
+						</tr>
+					</table>
+				</center>
+			</h3>
+
+			<h3>
+				The top 5 features from most important to least important are 'worst perimeter,' 'worst area,' 'area error,'
+				'mean perimeter,' 'mean area.' Most of these features are significantly important in identifying the benign cells
+				and play low importance in identifying malignant cells.
+			</h3>
+
+			<center><img src="images/shap_bc_rf.png" alt="shap" width="500" height="250"></center>
+			<center><figcaption>  SHAP values Top 5 Features  </figcaption></center>
+
+			
+		</div>
+
+
+
+
+		<div class="references">
+
+			<h2> References: </h2>
+
+			<h3>
+				http://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
+			</h3>
+
+			<h3>
+				https://www.cancer.org/cancer/types/breast-cancer/screening-tests-and-early-detection/breast-biopsy/fine-needle-aspiration-biopsy-of-the-breast.html
+			</h3>
+			
+
+			<h3>
+				https://www.cancer.org/cancer/types/breast-cancer/about/what-is-breast-cancer.html
+			</h3>
+
+			<h3>
+				https://www.cdc.gov/cancer/breast/basic_info/index.htm#:~:text=Each%20year%20in%20the%20United,cancer%20than%20all%20other%20women.
+			</h3>
+			
+			<h3>
+				https://towardsdatascience.com/understanding-random-forest-58381e0602d2
+			</h3>
+
+			<h3>
+				https://www.ibm.com/topics/random-forest
+			</h3>
+
+			<h3>
+				https://www.ibm.com/topics/random-forest
+			</h3>
+
+			<h3>
+				https://www.simplilearn.com/tutorials/machine-learning-tutorial/bagging-in-machine-learning
+			</h3>
+
+			<h3>	
+				https://machinelearningmastery.com/random-oversampling-and-undersampling-for-imbalanced-classification/
+			</h3>
+		</div>
+
+	</body>
+</html>
