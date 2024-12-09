@@ -18,93 +18,21 @@
 
 
 		<div class="page_title">
-			<h1> Mixed Clustering Segmentation of Diabetic Patients </h1>
+			<h1> Revolutionary Technology: Midas Algorithm for Pima Chicawaka Indians </h1>
 			<br>
 		</div>
 
 		<div class="content">
-			<h3> Diabetes is a disease where Insulin is ineffectively created or used by the body.
-				In the United States of America 11% of the population have Diabetes. 
-				In the U.S. it is the seventh leading cause of death and cost the country $327 billion to treat.
-				Insulin is most commonly used to treat patients with Type 2 Diabetes.
+			<h3> Humans are reduced to numerical form to better compress and vectorize attmah. The Chickawakas
+				are indominable people with a valuable history. Midas attempts to capture a sample of their community
+				in two moments of time. It reveals many truths we hold dear to our hearts and leverages fundamentals
+				to demonstate many corrolaries(Corinthians) for Apollo's Creed.
 			</h3>
 			
-			<h3> Diabetic patients are identified from clinical notes in the MIMIC-3 dataset and segmented 
-				using a mixed clustering model. The results of the analysis can be found in the following workbook:
-				<a href="https://github.com/rhiats/diab_sev_mimicIII"> Analysis Workbook </a>
-				The model was trained on categorical and numberical data because the features considered were 
-				Gender, Insurance, Medication and Number of Medications a Patient was used during treatment. 
-			</h3>
+			<center><img src="images/chicawaka.jpeg" alt="chicawaka" width="500" height="350"></center>
+			<center><figcaption> A Family Portrait at Oxford, Timeframe Unknown, Chickawaka #4  </figcaption></center>
 
-			<center><img src="images/gender.png" alt="gender" width="500" height="350"></center>
-			<center><figcaption> Gender of Diabetic Patients  </figcaption></center>
-
-			<h3> The gender of Diabetic patients within the Beth Israel Deaconess Medical Center (BIDMC) 
-				in Boston, MA between 2008 and 2012 is fairly balanced with an equal number of males and females
-				treated in the institution. According to the CDC more males are likely to be diagnosed with the 
-				disease than females.
-			</h3>
-
-			<center><img src="images/insurance.png" alt="insurance" width="500" height="350"></center>
-			<center><figcaption> Insurance of Diabetic Patients  </figcaption></center>
-
-			<h3> Most of the patients with Diabetes and in BIDMC are treating with Private insurance and 
-				a very small portion are on Government insurance. Also, very few pay out of pocket for insurance.
-				The most used insurance types is considered for those who switch insurance. 
-				In situations where people switch insurance once and both are equally used, then each instance is 
-				separately registered in the analysis. In this analysis patients switch insurance once, 
-				so both instances are used for investigation.
-			</h3>
-
-			<center><img src="images/top5Drugs.png" alt="top5Drugs" width="500" height="350"></center>
-			<center><figcaption> Top 5 Medications Diabetic Patients within the ICU  </figcaption></center>
-
-			<h3> In BIDMC, most of the Diabetic patients are treating with Saline and Insulin. These patients are likely
-				treating for Type 2 Diabetes and other conditions. There are patients that do not have any prescriptions 
-				in the system, which is strange for a patient within the ICU. Further understanding is needed for patients
-				in those cases. It is unclear what intervention they recieve while in the ICU. 
-			</h3>
-
-			<center><img src="images/drugs_per_patient.png" alt="drugs_per_patient" width="500" height="350"></center>
-			<center><figcaption>  Distribution of Drugs per Patient  </figcaption></center>
-
-			<h3> Most of the Diabetic patients are treating on around 25 medications. In an extreme case, there was
-				a patient on 182 medications. Those patients may have severe illnesses and may need special attention.
-			</h3>
-
-			<center><img src="images/elbow.png" alt="elbow" width="500" height="350"></center>
-			<center><figcaption>  Elbow Method to Find Ideal Number of Clusters  </figcaption></center>
-
-			<h3> A possible method to segment the patients is using a PCA to calculate a severity score. 
-				PCA would work best if the data was continuous so that the variation could be maximized.
-				Instead, a Mixed Clustering model as the features are predominantly categorical.  
-				More specifically, a K-Prototype is used to handle the categorical and continuous data. 
-				A K-Means algorithm uses Euclidean distance which would not work will with the categorical data.
-				KModes finds the most frequent event instead of Euclidean distance and can handle 
-				both categorical and continuous data. The Elbow method is used to select the optimal number of clusters.
-				The aim is to minimize the distance of each point to the centroid. 
-				It is found that the optimal number of clusters is 5. </h3>
-
-			<br>
-
-			<h3> Clusters 2, 4 and 5 are composed of predominantly female patients, while clusters 1 and 3 
-				are predominantly males.Clusters 1, 3, 4, and 5 are predominantly Medicare patients, so patients 
-				who are at least 65 years old. Cluster 2 is composed of patients on Private insurance with a median 
-				of 23 medications. Cluster 4 is only composed of Medicare and Medicaid insurance, so patients living 
-				on a lower income/fixed income. These patients are in a different income level than those of Medicare, 
-				who may be retired and living on a fixed income.Patients is clusters 2, 3, and 5 are treating on 
-				Insulin and those is cluster 3 are also suffering from High Blood Pressure. 
-				Cluster 2 and 3 are the largest clusters in the analysis - both with ~1,400 patients. </h3>
-
-				<br>
-
-				<h3> A pharma representative may want to market to health care professionals treating patients in 
-					cluster 2 because those are using insulin and are covered by private insurance. 
-					A doctor may want to intervene further on patients treating in cluster 3 beause those 
-					patients are at least 65 years old and suffering from both Diabetes and High Blood Pressure. 
-					These patients are already treating with insulin, but may need a change in dose or additional 
-					lifestyle intervention </h3>
-
+			
 		</div>
 
 
@@ -114,30 +42,6 @@
 
 			<h2> References: </h2>
 
-			<h3>
-				https://diabetesresearch.org/diabetes-statistics/#:~:text=37.3%20million%20people%2C%20or%2011.3,%2C%20economic%2C%20and%20ethnic%20backgrounds.
-			</h3>
-
-			<h3>
-				https://physionet.org/content/mimic3-carevue/1.4/
-			</h3>
-			
-
-			<h3>
-				https://www.medicalnewstoday.com/articles/diabetes-affects-men-women#:~:text=According%20to%20the%20Centers%20for,to%20develop%20complications%20than%20men.
-			</h3>
-
-			<h3>
-				https://medium.com/analytics-vidhya/clustering-on-mixed-data-types-in-python-7c22b3898086
-			</h3>
-			
-			<h3>
-				https://medium.com/@keswani-rohitkumar/k-prototypes-clustering-algorithm-f5d8e09a0104
-			</h3>
-
-			<h3>
-				https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/
-			</h3>
 		</div>
 
 	</body>
