@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport"
+		content="width=device-width",
+		initial-scale=1.0"/>
+		<title>Rhia Portfolio</title>
+		<link rel="stylesheet" href="stylesML.css">
+	</head>
+	<body>
+
+		<div class="header">
+		  <a href="index.html" class="logo"> Rhia Singh </a>
+		</div>
+
+
+
+
+		<div class="page_title">
+			<h1> Healthy or Diabetic using a Naive Bayes Classifier</h1>
+			<br>
+		</div>
+
+		<div class="content">
+			<h3> In the United States, Diabetes is the seventh leading cause of death with 11% of the population 
+				suffering from the ailment. It costs the country $327 billion to treat and insulin is the
+				 most common treatment of those with Type 2 Diabetes. Type 2 Diabetes occurs when the body 
+				 efficiently produces insulin. 
+				 <br>
+				 <br>
+				 The dataset is composed of females 21 years and older and was collected 
+				 by the National Institute of Diabetes and Digestive and Kidney Diseases. The Pima Indians refer to 
+				 North American Native Americans who live in Arizona. They are sedentary farmers who primarily 
+				 lived off of jackrabbits and beans.
+				 <br>
+				 <br>
+				 The following dataset is classified using a Principle Component Analysis (PCA) to select the top 3
+				 features and classified as healthy or diabetic using a Naive Bayes Classifier.The results of the 
+				 analysis can be found in the following workbook:<a href="https://github.com/rhiats/pimaDiab/tree/main"> 
+				Analysis Workbook </a>
+			</h3>
+			
+			<h2> Dataset Overview </h2> 
+			<h3>It is a small dataset with 768 records and 9 columns. One of the columns delineated whether 
+				a patient is diabetic or healthy. It is unclear whether each record is a unique patient or if the same 
+				patient appears multiple times in the dataset.
+				There are eight features in the sample.
+				
+				<ol>
+					<li><u> Number of Pregnancies</u></li> Gestational Diabetes may develop during a pregnancy and is more 
+					likely in women with 3 or more pregnancies. Additionally, women who are 30 or older when they 
+					become pregnant are at higher risk of developing Gestational Diabetes.
+					<br>
+					<br>
+
+					<li><u>Glucose</u></li> There are various types of Glucose tests for Diabetes. It is unclear the 
+					type of Glucose test used in this data collection method. Each record may be the same patient or 
+					a different patient. In this analysis each record is considered a unique patient, but it is 
+					possible that the same patient is repeated in different medical tests.
+					<br>
+					<br>
+					<li><u>Blood Pressure</u></li> This measures the pressure the heart uses to pump blood through 
+					the body. There are usually two numbers to describe the pressure.
+					The Systolic Pressure measures the pressure used to move the blood around the body when the 
+					heart beats. The Diastolic Pressure is the pressure used to move the blood around the body 
+					between heart beats.This dataset only denotes one number and it is uncertain if this is the 
+					Systolic or Diastolic pressure.
+					<br>
+					<br>
+					<li><u>Skin Thickness</u></li> The level of collagen tends to increase in Diabetic patients.
+					<br>
+					<br>
+					<li><u>Insulin Level</u></li> The amount of insulin in the blood. This test is used to determine if 
+					someone is Insulin resistant.
+					<br>
+					<br>
+					<li><u>Body Mass Index (BMI)</u></li> A value based on the height and weight of the person. 
+					A person may be classified as underweight, healthy, overweight and obese. A person who is overweight or 
+					obese may be more likely to develop diabetes.
+					<br>
+					<br>
+					<li><u>Diabetes Pedigree Function</u></li> The likelihood of diabetes based on a person’s family history. 
+					<br>
+					<br>
+					<li><u>Age</u></li> The age of the patients, which may be relevant to determine if the person is 
+					developing gestational or geriatric diabetes.
+					<br>
+					<br>
+				  </ol>
+
+				  There is a class imbalance with more than the majority (~65%) of the data being healthy.
+			</h3>
+
+			<center><img src="images/pima_balanced.png" alt="balance" width="400" height="350"></center>
+			<center><figcaption>  Imbalance Diabetic/Healthy Patients  </figcaption></center>
+
+			<h2> PCA to determine the Top 3 Significant Continuous Features </h2> 
+
+			<h3> From the projection of the instances on the first two principal components, it is clear that 
+				the Healthy and Diabetic patients are not linearly separable, so classifiers like SVM or 
+				Logistic Regression may not be beneficial. Based on the loadings the top three important 
+				features are Insulin, Glucose, and SkinThickness to predict the likelihood of Diabetes. 
+				The first component explains 94% of the variance in the data.
+			</h3>
+
+			<center><img src="images/pca_pima.png" alt="pca" width="400" height="350"></center>
+			<center><figcaption> PCA of Pima Indians  </figcaption></center>
+
+			<h2> Data Analysis </h2> 
+			
+			<h3> Conditional probability is used to determine the risk scores of two characteristics.
+			The probability a person is Diabetic given that she is Obese is 40% and the Probability a person is Diabetic 
+			given she had at least 3 pregnancies is 43%. Both have a risk of less than 50%, which is less severe a concern
+			to a health care professional.
+
+			The distribution of the top 3 features is used to uderstand the dispersion of the values in these three
+			categories.
+			
+			<ol>
+				<li><u> Glucose</u></li> Majority of the patients are between 99 and 140 units. 
+				It is unclear the type of Glucose test used for data collection.
+				<center><img src="images/glucose_distribution_pima.png" alt="distG" width="400" height="350"></center>
+
+				<li><u> Skin Thickness</u></li> Healthy skin thickness is between 1.5mm and 3.0 mm, 
+				but 50% of the data have skin thickness above 23mm.
+				<center><img src="images/SkinThickness_distribution_pima.png" alt="distST" width="400" height="350"></center>
+
+				<li><u> Insulin Level</u></li> Most of the patients have an Insulin value under 200  
+				microunits per milliliter (mcU/mL). A healthy Insulin level is 17mcU/mL. 50% of the data is 
+				under 30 mCU/mL. It is unclear if the values greater than 200 mCU/mL are outliers or sick patients.
+				<center><img src="images/insulin_distribution_pima.png" alt="distIns" width="400" height="350"></center>
+			</ol>
+
+			A t-test shows that the average ages of healthy and Diabetic women are significantly different (p < 0.001). 
+			The average age of a person who is Diabetic is 37 years, while the age of a healthy person is 31 years.
+			
+			</h3>
+
+			<h2>Naive Bayes Classification of Patients</h2>
+			<h3>The dataset is small, so a simple model - the Naive Bayes Classifier - is used to classify the patients 
+				as healthy or Diabetic. The model is trained on the top three features from the Principle Component 
+				Analysis (PCA) - Insulin, Glucose, and Skin Thickness - preventing noise from entering the model. 
+				The results are evaluated in  three methods to determine the goodness of fit: F1-Score, ROC Curve,
+				and Confusion Matrix.
+				<br>
+				<br>
+				There is a class imbalance, so the F1-score is used to evaluate the results of the model. 
+				A high accuracy curve can result from the majority class being predicted. The model results 
+				in an F1-score of 0.51. This is a mediocre score since the best score the model could produce is 1. 
+				A feature analysis is used to better understand the significance of each feature in the model.
+				<br>
+				<br>
+				A plot illustrating the true positive and false positive rate at various the discrimination thresholds.
+				 The true positive rate or sensitivity tells us the proportion of the positive class that was correctly 
+				 labeled by the model. In this case, that is the number of people who were 
+				 correctly identified as Diabetic by the model. The False Positive rate is the rate 
+				 of incorrect positives attributed by the model. In this situation it is the rate of 
+				 people labeled Diabetic who are actually healthy. Neither is ideal as both 
+				 incur a cost on the health system. The Area under the Curve (AUC) measures 
+				 how good the classifier is at distinguishing true and false positives. This model scores 0.65, 
+				 so it is able to distinguish between classes slightly better than random chance. 
+				 <center><img src="images/ROC_curve_pima.png" alt="ROC" width="400" height="350"></center>
+				 <br>
+				 <br>
+				 The Confusion Matrix is a method to better understand the number of False Positives and False Negatives. 
+				 False predictions could be harmful to the health of the patient. The recall refers to 
+				 the number of correctly predicted positively Diabetic people out of actual Diabetic people 
+				 and scores 0.41. The model misses a substantial number of Diabetic people and mislabels them
+				 as healthy. 
+				 The precision refers to the number of Diabetic people correctly predicted out of all the 
+				 Diabetic classifications predicted by the model and the model scores 0.66, which is slightly 
+				 better than random chance.
+				 <center>
+					<table>
+						<tr>
+							<td>225</td>
+							<td>28</td>
+						</tr>
+						<tr>
+							<td>77</td>
+							<td>54</td>
+						</tr>
+					</table>
+				</center>
+			</h3>
+			<h3> The most important features to least important features are Glucose, Insulin and SkinThickness. 
+				The higher these values, then the more likely a sample is classified as Diabetic. 
+				<center><img src="images/shap_pima.png" alt="shap" width="500" height="200"></center>
+				<center><figcaption> SHAP Feature Analysis  </figcaption></center>
+
+				There may be two additional future steps for this analysis. The first is to try
+				a non-linear classification model (KNN, Decision Tree or Random Forest) and the third is to handle the class imbalance using over or under sampling.
+				These three steps may result in improved evaluation metrics.
+
+			</h3>
+
+		</div>
+
+
+
+
+		<div class="references">
+
+			<h2> References: </h2>
+
+			<h3>
+				https://www.britannica.com/topic/Pima-people
+			</h3>
+
+			<h3>
+				https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8943493/#:~:text=Pima%20Indians%20are%20a%20Native,of%20global%20health%20%5B4%5D.
+			</h3>
+			
+
+			<h3>
+				https://towardsdatascience.com/pca-clearly-explained-how-when-why-to-use-it-and-feature-importance-a-guide-in-python-7c274582c37e
+			</h3>
+
+			<h3>
+				https://www.investopedia.com/terms/c/conditional_probability.asp
+			</h3>
+			
+			<h3>
+				https://medium.com/@corymaklin/shap-shapley-additive-explanations-b8f0fce06202
+			</h3>
+
+			<h3>
+				https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database?resource=download
+			</h3>
+
+			<h3>
+				https://github.com/npradaschnor/Pima-Indians-Diabetes-Dataset/blob/master/Pima%20Indians%20Diabetes%20Dataset.ipynb
+			</h3>
+
+			<h3>
+				https://www.datacamp.com/tutorial/principal-component-analysis-in-python
+			</h3>
+		
+			<h3>
+				https://scentellegher.github.io/machine-learning/2020/01/27/pca-loadings-sklearn.html
+			</h3>
+
+			<h3>
+				https://stats.stackexchange.com/questions/27300/using-principal-component-analysis-pca-for-feature-selection
+			</h3>
+			
+			<h3>
+				https://diabetesjournals.org/care/article/12/5/309/1571/Relationship-of-Skin-Thickness-to-Duration-of
+			</h3>
+
+			<h3>
+				https://www.cdc.gov/mmwr/volumes/72/wr/mm7201a4.htm#:~:text=The%20percentage%20of%20mothers%20giving,2016%20to%208.3%25%20in%202021.
+			</h3>
+
+
+			<h3>
+				https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7153959/#:~:text=In%20this%20study%2C%20we%20found,%3C24%20kg%2Fm2.
+			</h3>
+
+			<h3>
+				https://www.kaggle.com/code/ptynecki/pima-indians-diabetes-prediction-with-lr-84/notebook
+			</h3>
+		
+			<h3>
+				https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc#:~:text=An%20ROC%20curve%20
+			</h3>
+
+			<h3>
+				https://www.cdc.gov/diabetes/basics/getting-tested.html
+			</h3>
+			
+			<h3>
+				https://www.diabetes.org.uk/guide-to-diabetes/managing-your-diabetes/blood-pressure
+			</h3>
+
+			<h3>
+				https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/learn/lecture/10772510?start=0#overview
+			</h3>
+
+			<h3>
+				https://medlineplus.gov/lab-tests/insulin-in-blood/
+			</h3>
+			
+			<h3>
+				https://www.urmc.rochester.edu/encyclopedia/content.aspx?contenttypeid=167&contentid=insulin_total_free#:~:text=Results%20are%20given%20in%20microunits,much%20insulin%20in%20medicine%20form.
+			</h3>
+
+			<h3>
+				https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3784870/#:~:text=The%20mean%20skin%20thickness%20of,3.00%20mm%20%5BTable%204%5D.
+			</h3>
+
+			<h3>
+				https://towardsdatascience.com/end-to-end-data-science-example-predicting-diabetes-with-logistic-regression-db9bc88b4d16
+			</h3>
+			
+			<h3>
+				https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8306487
+			</h3>
+
+			<h3>
+				https://www.analyticsvidhya.com/blog/2020/06/auc-roc-curve-machine-learning/#What_are_Sensitivity_and_Specificity?
+			</h3>
+
+			<h3>
+				https://towardsdatascience.com/understanding-confusion-matrix-a9ad42dcfd62
+			</h3>
+
+			<h3>
+				https://towardsdatascience.com/using-shap-values-to-explain-how-your-machine-learning-model-works-732b3f40e137
+			</h3>
+		</div>
+
+
+	</body>
+</html>
