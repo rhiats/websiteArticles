@@ -18,7 +18,7 @@
 
 
 		<div class="page_title">
-			<h1> Classify Snoring using in RNN on TIHM Dementia Data</h1>
+			<h1> Classify Snoring using in RNN and LSTM on TIHM Dementia Data</h1>
 			<br>
 		</div>
 
@@ -29,7 +29,7 @@
 				 	The TIHM project originates in England and is an open dataset for remote healthcare monitoring in dementia patients. It monitors patients in their homes using low-cost Internet of Things (IoT) sensing technologies. The sensing technologies collect vital signs and sleep patterns of patients in various rooms of their homes. The patients had to be 50 years old with a verified diagnosis of dementia. There was sleep data for 17 participants. On average each participant was involved in the study for about 50 days. 
 				 <br>
 				 <br>
-				 The data is time-series data, so I used an Recurrent Neural Network (RNN) to classify patients as snoring or not. I am interested in snoring information because there have been interest in snoring or not snoring data for patients with dementia. The results of the 
+				 The data is time-series data, so I used an Recurrent Neural Network (RNN) and LSTM to classify patients as snoring or not. I am interested in snoring information because there have been interest in snoring or not snoring data for patients with dementia. The results of the 
 				 analysis can be found in the following workbook:<a href="https://github.com/rhiats/TIHM-Dataset-RNN/blob/main/RNN_TIHM_Dataset.ipynb"> 
 				Analysis Workbook </a>
 			</h3>
@@ -42,22 +42,43 @@
 
 			<h2> Data Analysis: RNN Model </h2> 
 			
-			<h3> The RNN model had a hidden size of 32 and used binary classification to classify patients as snoring or not. I trained on 100 epochs and calculated the loss values and the accuracy values during training.			
+			<h3> The RNN model had a hidden size of 16 and used binary classification to classify patients as snoring or not. I trained on 100 epochs and calculated the loss values and the accuracy values during training. My model has a tendency to overfit, so I included a drop out rate of 0.4. The drop out rate means that all the neurons are not used to train the model.
 			</h3>
 
 			<center><img src="images/RNN_TIHM_Epoch_v_Loss.png" alt="ROC" width="400" height="350"></center>
 
-			<h3> The Loss function declines from 0.64 to 0.16 by the hundredth epoch. This is a great loss value as it is close to 0. 			
+			<h3> The Loss function declines from 0.55 to 0.0068 by the hundredth epoch. This is a great loss value as it is close to 0. 			
 			</h3>
 
 			<center><img src="images/RNN_TIHM_Epoch_v_Accuracy.png" alt="ROC" width="400" height="350"></center>
 
-			<h3> The accuracy during training remains at 96% which is great because it is close to 100%. Accuracy is the degree of correctness of the result. The model is highly accurate, despite only having two features. 			
+			<h3> The accuracy during training remains at 100%. Accuracy is the degree of correctness of the result. The model is highly accurate, despite only having two features. The model is most likely overfitting because there is not enough training data.  			
 			</h3>
 
 			<h2>Evaluate the Model</h2>
 			
-			<h3> The test set has a test loss of 0.7 and a test accuracy of 96%. Both of these values are good as the loss is close to zero and the accuracy is close to 100%. 
+			<h3> The test set has a test loss of 0.3 and a test accuracy of 100%. Both of these values are good as the loss is close to zero and the accuracy is close to 100%. 
+
+			</h3>
+
+			<h2> Data Analysis: LSTM Model </h2> 
+			
+			<h3> The LSTM model is trained on the same sample of data as the RNN model. It has two drop outs set at 0.2. It is trained for 20 epochs.
+			</h3>
+
+			<center><img src="images/LSTM_TIHM_Epoch_v_Loss.png" alt="ROC" width="400" height="350"></center>
+
+			<h3> The Loss function declines from 0.17 to 5e-6 by the twentieth epoch. This is a great loss value as it is close to 0 and only takes 20 epochs. 			
+			</h3>
+
+			<center><img src="images/LSTM_TIHM_Epoch_v_Accuracy.png" alt="ROC" width="400" height="350"></center>
+
+			<h3> The accuracy during training remains at 100%. Accuracy is the degree of correctness of the result. The model is most likely overfitting because there is not enough training data in the sample. It is only trained on two features, so increasing the complexity of the data may result in less overfitting.   			
+			</h3>
+
+			<h2>Evaluate the Model</h2>
+			
+			<h3> The test set has a test loss of 2.94e-06 and a test accuracy of 100%. Both of these values are good as the loss is close to zero and the accuracy is close to 100%. 
 
 			</h3>
 
