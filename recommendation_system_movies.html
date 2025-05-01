@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport"
+		content="width=device-width",
+		initial-scale=1.0"/>
+		<title>Rhia Portfolio</title>
+		<link rel="stylesheet" href="stylesML.css">
+	</head>
+	<body>
+
+		<div class="header">
+		  <a href="index.html" class="logo"> Rhia Singh </a>
+		</div>
+
+
+
+
+		<div class="page_title">
+			<h1> Recommend Movies using SVD</h1>
+			<br>
+		</div>
+
+		<div class="content">
+			<h3> 
+				 <br>
+				 The MovieLens 100k dataset contains 100k movies rated between 1 and 5, where 5 is the highest rating. There are 943 unique users and 1,682 movies. The movies are rated between 1997 and 1998. The results of the 
+				 analysis can be found in the following workbook:<a href="https://github.com/rhiats/MovieLens-100k-dataset-Recommendation-System/blob/main/MovieLens_100k_dataset_EDA.ipynb"> 
+				Recommendation System Workbook </a>
+			</h3>
+			
+			<h2> Dataset Overview </h2> 
+			<h3>
+				Most of the ratings are a 3 or 4. Majority of the users leave multiple reviews, with each movie getting mutlple reviews. The top 10 most rated movies are: 50, 258, 100, 181, 294, 286, 288, 1, 300, and 121. Majority of the the reviews occur in November between 4pm and 11pm.  
+				
+			</h3>
+
+			<h2> Data Analysis: User Clusters using K-Means Cluster </h2> 
+			
+			<h3> There are 7 user clusters. The elbow method was used to calculate the number of clusters. Below is a visualization of the seven clusters.
+			</h3>
+
+			<center><img src="images/movies_rec_number_clusters.png" alt="ROC" width="400" height="350"></center>
+
+			<h2> Recommendation Model Performance </h2>
+			
+
+			<h3> The Root Mean Squared error which penalizes bigger error more using a quadratic equation is 0.93. This is a low number, so the error is low.    			
+			</h3>
+
+
+		</div>
+
+
+	</body>
+</html>
