@@ -56,13 +56,15 @@
 			</h3>
 
 			<h3>
-				The first feature I evaluate is Age. Age refers to the age of the patient. In the dataset, patients in their 60's tend to have CAD. 27% of 60 year olds have CAD compared to other ages. I fail to reject the null that the ages are similar between CAD and Healthy patients.  
+				The first feature I evaluate is Age. Age refers to the age of the patient. In the dataset, patients in their 60's tend to have CAD. 27% of 60 year olds have CAD compared to other ages. I conducted a t-test to compare the average age of the healthy and sick and fail to reject the null that the ages are similar between CAD and Healthy patients (p value: 8.96e-05).   
 			</h3>
 
 			<center><img src="images/CAD_Class_Visualization.png" alt="balanceBC" width="400" height="300"></center>
 			<center><figcaption> Age_by_class_CAD  </figcaption></center>
 			
-
+			<h3>
+				The next feature I compared between the two classes is Sex. I conducted a Chi-Square test of independence and found that sex and health status are not independent (p value: 2.67e-06).    
+			</h3>
 		</div>
 
 
