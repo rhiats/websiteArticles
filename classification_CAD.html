@@ -60,7 +60,7 @@
 			</h3>
 
 			<center><img src="images/CAD_Class_Visualization.png" alt="balanceBC" width="400" height="300"></center>
-			<center><figcaption> Age_by_class_CAD  </figcaption></center>
+			<center><figcaption> Age by class CAD  </figcaption></center>
 			
 			<h3>
 				The next feature I compared between the two classes is Sex. I conducted a Chi-Square test of independence and found that sex and health status are not independent (p value: 2.67e-06).    
@@ -83,7 +83,20 @@
 			</h3>
 
 			<h3>
-				I trained a basic Multi Layer Perceptron (MLP) on the data [4]. I used 4 layers: input layer, 2 hidden layers and output layer with 5, 8, 4 and 1 hidden units respectively. I used ReLU activation functions to address the non-linearity and a Sigmoid activation function to split the data into 2 classes. The loss function used is a binary-cross entropy and Adam as optimizer.
+				I trained a basic Multi Layer Perceptron (MLP) on the data for 200 epochs [4]. I used 4 layers: input layer, 2 hidden layers and output layer with 5, 8, 4 and 1 hidden units respectively. I used ReLU activation functions to address the non-linearity and a Sigmoid activation function to split the data into 2 classes. The loss function used is a binary-cross entropy and Adam as optimizer. The model results in an accuracy of 78%, specificity of 81%, and a sensitivity of 75%.  
+			</h3>
+
+			<center><img src="images/CAD_ROC_MLP.png" alt="CAD_ROC_MLP" width="400" height="300"></center>
+			<center><figcaption> ROC for MLP model  </figcaption></center>
+
+			<center><img src="images/CAD_MLP_epoch_v_loss.png" alt="CAD_ROC_MLP" width="400" height="300"></center>
+			<center><figcaption> Epoch v. Loss for MLP model  </figcaption></center>
+
+			<center><img src="images/CAD_model_comparisons.png" alt="CAD_ROC_MLP" width="400" height="300"></center>
+			<center><figcaption> Model Comparisons </figcaption></center>
+
+			<h3>
+				
 			</h3>
 
 
