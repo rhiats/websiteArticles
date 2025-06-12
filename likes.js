@@ -16,7 +16,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 // ✅ List of like IDs (add more if needed)
-const likeIDs = ["airbnb_nyc", "boston_listings"];
+const likeIDs = ["airbnb_nyc", "lifeExpectancy"];
 
 // Load and update counts on page load
 likeIDs.forEach(id => {
