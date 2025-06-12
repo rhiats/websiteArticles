@@ -3,13 +3,13 @@ import { getDatabase, ref, get, set, onValue } from "https://www.gstatic.com/fir
 
 // ✅ Firebase Config
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "XXXXXXXXXXXX",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyD57U7Cc3vN7zg8eAkdLk91LanWPtLzL6I",
+  authDomain: "like-counter-2b119.firebaseapp.com",
+  databaseURL: "https://like-counter-2b119-default-rtdb.firebaseio.com/",
+  projectId: "like-counter-2b119",
+  storageBucket: "like-counter-2b119.firebasestorage.app",
+  messagingSenderId: "1097477475022",
+  appId: "1:1097477475022:web:d112c828db7bf2635a9e9f"
 };
 
 const app = initializeApp(firebaseConfig);
