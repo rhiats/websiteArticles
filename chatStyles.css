@@ -3,11 +3,12 @@
     border: 1px solid #ccc;
     padding: 10px;
     font-family: Arial, sans-serif;
-    margin-bottom: 80px;
+    /*margin-bottom: 80px;*/
     z-index: 1;
     position: relative;
-    margin-top: 100px;
-    justify-content: center;
+    /*margin-top: 100px;
+    justify-content: center;*/
+    margin: 100px auto 80px auto; /* top auto bottom auto */
   }
   .chat-box {
     height: 300px;
