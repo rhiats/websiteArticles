@@ -1,0 +1,21 @@
+.like-button-container {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;
+  gap: 10px;                /* Space between count and button */
+  margin: 20px 0;           /* Optional spacing */
+}
+
+.like-button-container button {
+  background-color: #0682ca;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.like-button-container button:hover {
+  background-color: #0682ca;
+}
