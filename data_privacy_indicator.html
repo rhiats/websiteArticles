@@ -57,16 +57,13 @@
 
 		<script type="module" src="likes.js"></script>
 
-		<div id="chat-placeholder"></div>
-
-		<script>
-			fetch('chat.html')
-				.then(res => res.text())
-				.then(html => {
-				document.getElementById('chat-placeholder').innerHTML = html;
-				});
-		</script>
+		
 		<script type="module" src="websiteChat.js"></script>
+		<div class="chat-container">
+			<div id="chat-box" class="chat-box"></div>
+			<input type="text" id="chat-input" placeholder="Type a message..." />
+			<button id="send-btn">Send</button>
+		</div>
 
 	</body>
 </html>
