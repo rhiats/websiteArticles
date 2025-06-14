@@ -6,6 +6,7 @@
     margin-bottom: 80px; /* push references down */
     z-index: 1;
     position: relative;
+    margin-top: 80px;
   }
   .chat-box {
     height: 300px;
