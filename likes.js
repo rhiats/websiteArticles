@@ -18,7 +18,7 @@ const db = getDatabase(app);
 // ✅ List of like IDs (add more if needed)
 const likeIDs = ["airbnb_nyc", "lifeExpectancy", "breastCancerClassification",
   "CADClassification", "CommercialAnalytics", "privacy", "segmentationDiabetes",
-  "DiabeticNB","PopGrowth","LRSupermarketSales","MovieRec", "LSTM"
+  "DiabeticNB","PopGrowth","LRSupermarketSales","MovieRec", "LSTM","heart-failure"
 ];
 
 // Load and update counts on page load
