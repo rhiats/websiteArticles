@@ -23,10 +23,11 @@
 		</div>
 
 		<div class="content">
-			<h3> I found a dataset on UCI Machine Learning that covers heart failure. 
+			<h3> I found a dataset on UCI Machine Learning that includes data about heart failure. 
 				This dataset is discussed in the paper: "Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone," 
-				so I decided to replicate the analysis in this paper in my project using Python. I will predict the survival of patients with heart failure using a variety of classifiers.
-				I found that the artificial neural network performs the best with a    
+				so I decided to replicate the analysis done in this paper in my project using Python. I predict the survival of patients with heart failure using a variety of classifiers.
+				I found that the artificial neural network performs the best with a Matthews Correlation Coefficient (MCC) score of about 0.6. I chose to use an MCC score, like the paper, because
+				MCC is the works well with class imbalance.      
 				 <br>
 				 <br>
 				 
@@ -43,7 +44,14 @@
 
 			<h3> Summary Table of Continuous Full Sample shows the median, mean and standard deviation of continuous variables in the dataset. 
 				There are seven continuous features in the dataset. The continuous features: age, ejection_fraction, platelets, serum_creatinine,
-				and serum_sodium are symmetrically distributed.  
+				and serum_sodium are symmetrically distributed. This is benificial for training Artificial Neural Networks, especially when the 
+				data is standardized. The standard deviation of creatinine phosphokinase is greater than its mean, so 
+				it has high variance. The paper does not transform any variables, but it might be interesting to transform
+				this variable (using log) to handle the variance.
+			</h3>
+
+			<h3>
+				
 			</h3>
 
 			<center><img src="images/heart_disease_class_balance.png" alt="balanceBC" width="400" height="300"></center>
