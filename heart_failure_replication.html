@@ -26,7 +26,7 @@
 			<h3> I found a dataset on UCI Machine Learning that includes data about heart failure. 
 				This dataset is discussed in the paper: "Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone," 
 				so I decided to replicate the analysis done in this paper in my project using Python. I predict the survival of patients with heart failure using a variety of classifiers.
-				I found that the artificial neural network performs the best with a Matthews Correlation Coefficient (MCC) score of about 0.6. I chose to use an MCC score, like the paper, because
+				I found that the artificial neural network (ANN) performs the best with a Matthews Correlation Coefficient (MCC) score of about 0.6. I chose to use an MCC score, like the paper, because
 				MCC is the works well with class imbalance.      
 				 <br>
 				 <br>
@@ -51,7 +51,22 @@
 			</h3>
 
 			<h3>
-				
+				Significant Pearson Correlations shows the correlation between continuous variables that have a 
+				significance less than 0.05. None of the variables are that significantly linearly correlated. 
+				The abscence of multicollinearity reduces redundancy in the model, so the ANN can learn diverse
+				independent patterns. The ANN can learn non-linear patterns. 
+			</h3>
+
+			<h3>
+				Similar to the paper, I used Grid Search to identify the ANN with the highest MCC score. 
+				The best performing ANN has a:
+				<ul>
+					<li>Activation of tanh</li>
+					<li>Alpha of 0.0001 (regularization amount on the loss)</li>
+					<li>2 hidden layers of size 50</li>
+					<li>Constant learning rate</li>
+					<li>Stochastic Gradient Descent Solver</li>
+				</ul>
 			</h3>
 
 			<center><img src="images/heart_disease_class_balance.png" alt="balanceBC" width="400" height="300"></center>
