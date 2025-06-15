@@ -15,26 +15,26 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-window.addEventListener("DOMContentLoaded", () => {
+// Get page ID based on filename
+const pageId = location.pathname.split("/").pop().replace(".html", "");
+
+const chatRef = ref(db, `chats/${pageId}`);
+
+// Display messages
+onChildAdded(chatRef, (snapshot) => {
+  const message = snapshot.val();
   const chatBox = document.getElementById("chat-box");
-  const chatInput = document.getElementById("chat-input");
-  const sendBtn = document.getElementById("send-btn");
+  const p = document.createElement("p");
+  p.textContent = message;
+  chatBox.appendChild(p);
+});
 
-  if (!chatBox || !chatInput || !sendBtn) return; // only run if elements exist
-
-  sendBtn.onclick = () => {
-    const msg = chatInput.value.trim();
-    if (msg) {
-      push(ref(db, "messages"), { text: msg });
-      chatInput.value = "";
-    }
-  };
-
-  onChildAdded(ref(db, "messages"), (data) => {
-    const div = document.createElement("div");
-    div.className = "chat-message";
-    div.innerText = data.val().text;
-    chatBox.appendChild(div);
-    chatBox.scrollTop = chatBox.scrollHeight;
-  });
+// Send a message
+document.getElementById("send-btn").addEventListener("click", () => {
+  const input = document.getElementById("chat-input");
+  const text = input.value.trim();
+  if (text) {
+    push(chatRef, text);
+    input.value = "";
+  }
 });
