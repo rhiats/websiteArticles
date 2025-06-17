@@ -7,6 +7,8 @@
 		initial-scale=1.0"/>
 		<title>Rhia Portfolio</title>
 		<link rel="stylesheet" href="stylesML.css">
+		<link rel="stylesheet" href="chatStyles.css" />
+		<link rel="stylesheet" href="likeStyles.css" />
 	</head>
 	<body>
 
@@ -19,8 +21,10 @@
 
 		<div class="page_title">
 			<h1> European Population Growth 2008 </h1>
-			<span id="count-PopGrowth">0</span>
-			<button onclick="like('PopGrowth')">❤️ Like</button>
+			<div class="like-button-container">
+				<span id="count-PopGrowth">0</span>
+				<button onclick="like('PopGrowth')">❤️ Like</button>
+			</div>
 			<br>
 		</div>
 
@@ -61,6 +65,11 @@
 		</div>
 
 		<script type="module" src="likes.js"></script>
-
+		<script type="module" src="websiteChat.js"></script>
+		<div class="chat-container">
+			<div id="chat-box" class="chat-box"></div>
+			<input type="text" id="chat-input" placeholder="Type a message..." />
+			<button id="send-btn">Send</button>
+		</div>
 	</body>
 </html>
